@@ -112,7 +112,7 @@ class ViewController: UIViewController {
             clientSecret: nil,
             keychainItemName: kKeychainItemName,
             delegate: self,
-            finishedSelector: "viewController:finishedWithAuth:error:"
+            finishedSelector: #selector(ViewController.viewController(_:finishedWithAuth:error:))
         )
     }
     
