@@ -14,6 +14,9 @@
 		738754B11D3CE993006DA49E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738754B01D3CE993006DA49E /* Assets.xcassets */; };
 		738754B41D3CE993006DA49E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738754B21D3CE993006DA49E /* LaunchScreen.storyboard */; };
 		738754BC1D3CEB17006DA49E /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738754BB1D3CEB17006DA49E /* GTMOAuth2ViewTouch.xib */; };
+		738754BE1D3CEBE3006DA49E /* GoogleAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 738754BD1D3CEBE3006DA49E /* GoogleAPIClient.framework */; };
+		738754C11D3CEBE9006DA49E /* GTMOAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 738754BF1D3CEBE9006DA49E /* GTMOAuth2.framework */; };
+		738754C21D3CEBE9006DA49E /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 738754C01D3CEBE9006DA49E /* GTMSessionFetcher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		738754B31D3CE993006DA49E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		738754B51D3CE993006DA49E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		738754BB1D3CEB17006DA49E /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
+		738754BD1D3CEBE3006DA49E /* GoogleAPIClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAPIClient.framework; path = "Pods/../build/Release-iphoneos/GoogleAPIClient.framework"; sourceTree = "<group>"; };
+		738754BF1D3CEBE9006DA49E /* GTMOAuth2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMOAuth2.framework; path = "Pods/../build/Debug-iphoneos/GTMOAuth2.framework"; sourceTree = "<group>"; };
+		738754C01D3CEBE9006DA49E /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = "Pods/../build/Debug-iphoneos/GTMSessionFetcher.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				738754C11D3CEBE9006DA49E /* GTMOAuth2.framework in Frameworks */,
+				738754C21D3CEBE9006DA49E /* GTMSessionFetcher.framework in Frameworks */,
+				738754BE1D3CEBE3006DA49E /* GoogleAPIClient.framework in Frameworks */,
 				26A17858CB0CA11F11DF2D8C /* Pods_Google_Calendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +95,9 @@
 		F7BA2367E0918206812EFE9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				738754BF1D3CEBE9006DA49E /* GTMOAuth2.framework */,
+				738754C01D3CEBE9006DA49E /* GTMSessionFetcher.framework */,
+				738754BD1D3CEBE3006DA49E /* GoogleAPIClient.framework */,
 				05B60A530BDDF7799DB5F0A5 /* Pods_Google_Calendar.framework */,
 			);
 			name = Frameworks;
@@ -331,10 +343,19 @@
 			baseConfigurationReference = 1D3BF13E817D572074877E8E /* Pods-Google Calendar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "Google Calendar/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Arshin.Google-Calendar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -343,10 +364,19 @@
 			baseConfigurationReference = 53CE24BE3FE345D8D99C0C7C /* Pods-Google Calendar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "Google Calendar/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Arshin.Google-Calendar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

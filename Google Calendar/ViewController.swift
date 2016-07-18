@@ -13,7 +13,7 @@ import UIKit
 class ViewController: UIViewController {
     
     private let kKeychainItemName = "Google Calendar API"
-    private let kClientID = "YOUR_CLIENT_ID_HERE"
+    private let kClientID = "639141532617-fgh7vmtoigvfgm9sm2e3d88c88p8r2mg.apps.googleusercontent.com"
     
     // If modifying these scopes, delete your previously saved credentials by
     // resetting the iOS simulator or uninstall the app.
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         service.executeQuery(
             query,
             delegate: self,
-            didFinishSelector: "displayResultWithTicket:finishedWithObject:error:"
+            didFinishSelector: #selector(ViewController.displayResultWithTicket(_:finishedWithObject:error:))
         )
     }
     
