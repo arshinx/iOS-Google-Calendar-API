@@ -6,6 +6,8 @@
 //  Copyright © 2016 Arshin Jain. All rights reserved.
 //
 
+// Note: Replace ClientID
+
 import GoogleAPIClient
 import GTMOAuth2
 import UIKit
@@ -13,6 +15,8 @@ import UIKit
 class ViewController: UIViewController {
     
     private let kKeychainItemName = "Google Calendar API"
+    
+    // Replace ClientID Below:
     private let kClientID = "639141532617-fgh7vmtoigvfgm9sm2e3d88c88p8r2mg.apps.googleusercontent.com"
     
     // If modifying these scopes, delete your previously saved credentials by
