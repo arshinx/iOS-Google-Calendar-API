@@ -6,7 +6,7 @@
 //  Copyright © 2016 Arshin Jain. All rights reserved.
 //
 
-// Note: Replace ClientID
+// Note: Replace ClientID (obtain here: https://console.developers.google.com/start/api?id=calendar)
 
 import GoogleAPIClient
 import GTMOAuth2
@@ -16,8 +16,9 @@ class ViewController: UIViewController {
     
     private let kKeychainItemName = "Google Calendar API"
     
+    // Obtain Client ID from https://console.developers.google.com/start/api?id=calendar
     // Replace ClientID Below:
-    private let kClientID = "639141532617-fgh7vmtoigvfgm9sm2e3d88c88p8r2mg.apps.googleusercontent.com"
+    private let kClientID = "639141532617-fgh7vmtoigvfgm9sm2e3d88c88p8r2mg.apps.googleusercontent.comX"
     
     // If modifying these scopes, delete your previously saved credentials by
     // resetting the iOS simulator or uninstall the app.
