@@ -1,0 +1,6 @@
+framework module GoogleAPIClient {
+  umbrella header "GoogleAPIClient-umbrella.h"
+
+  export *
+  module * { export * }
+}
